@@ -33,16 +33,32 @@ Technologies Used
 Project Structure
 IT-Dashboard/
 │
-├── public/
-│   ├── index.html
+├── protected/
+│   ├── fillSelects.js
 │   ├── machineManager.html
+│   ├── machineManager.js
+│   ├── machineTable.html
+│   ├── machineTable.js
+│   ├── table2.js
+│   └── uploadToTable.js
+│
+├── public/
+│   ├── alerts.js
+│   ├── animations.js
+│   ├── app.js
+│   ├── charts.js
+│   ├── importInventory.js
+│   ├── index.html
+│   ├── loginSystem.js
 │   ├── style.css
+│   ├── summarycards.js
 │   └── table.js
 │
 ├── server.js
-├── importInventory.js
 ├── package.json
-└── README.md
+├── package-lock.json
+├── README.md
+└── LICENSE
 
 
 Database
