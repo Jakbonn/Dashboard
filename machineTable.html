@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>IT Stock Dashboard</h1>
+        </div>
+        <div>
+            <ul class="nav-row">
+                <li class="nav-cell"><a href="index.html">HOME</a></li>
+                <li class="nav-cell"><a href="machineManager.html">ADD</a></li>
+                <li class="nav-cell"><a href="machineTable.html">TABLE</a></li>
+            </ul>
+        </div>
+        <div></div>
+    </header>
+
+    <main class="main-table-container">
+        <p><b>Inventory 🔍</b> filter by <button id="sort-tag-2">tag</button> / <button id="sort-brand-2">brand</button> / <button id="sort-site-2">site</button> / <button id="sort-status-2">status</button></p><br>
+        <div class="table-container-2" id="table-container-2">
+            <table id="machine-table"></table>
+        </div>
+    </main>
+
+    <dialog id="machine-details-dialog" class="machine-details-dialog">
+        <div class="machine-details-header">
+            <h2 id="machine-details-title">Machine details</h2>
+            <button class="close-details-button" id="close-machine-details">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+            </button>
+        </div>
+        <table id="machine-details-list" class="machine-details-list"></table>
+    </dialog>
+
+    <footer>
+        <p>IT Stock Dashboard v1.0 © 2026 TomTom Internship Project</p>
+    </footer>
+</body>
+<script type="module" src="machineTable.js"></script>
+</html>

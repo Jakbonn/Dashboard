@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>IT Stock Dashboard</h1>
+        </div>
+        <div id="nav-container" hidden>
+            <ul class="nav-row">
+                <li class="nav-cell"><a href="index.html">HOME</a></li>
+                <li class="nav-cell"><a href="machineManager.html">ADD</a></li>
+                <li class="nav-cell"><a href="machineTable.html">TABLE</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="alerts-counter" id="alerts-counter"></p>
+        </div>
+    </header>
+
+    <menu>
+        <p id="live-info"></p>
+        <div class="machines-counter">Total machines<br> <h2 id="machines-counter"></h2></div>
+        <div class="spares-counter">Spares in stock <br> <h2 id="spares-counter"></h2></div>
+        <div class="ram-counter">Average RAM <br> <h2 id="ram-counter"></h2></div>
+        <div class="action-counter">Needs action <br> <h2 id="action-counter"></h2></div>
+    </menu>
+
+    <main class="main-container">
+        <div class="alerts-display-container" id="alerts-display-container">
+            <h4>⚠ Alerts - things that need attention</h4>
+            <div class="alerts-display" id="alerts-display"></div>
+        </div>
+
+        <div class="system-charts-container" id="system-charts-container">
+            <h4>Machines by operating system</h4>
+            <div class="chart-container" id="chart-container">
+                <canvas class="system-chart" id="system-chart"></canvas>
+            </div>
+        </div>
+
+        <div class="ram-charts-container" id="ram-charts-container">
+            <h4>Machines by installed RAM</h4>
+            <div class="chart-container" id="ram-chart-container">
+                <canvas class="ram-chart" id="ram-chart"></canvas>
+            </div>
+        </div>
+        <div class="inventory-table-container" id="inventory-table-container">
+            <p><b>Inventory 🔍</b> filter by <button id="sort-brand">brand</button> / <button id="sort-site">site</button> / <button id="sort-status">status</button></p><br>
+            <div class="table-container" id="table-container">
+                <table id="inventory-table"></table>
+            </div>
+        </div>
+    </main>
+
+    <dialog class="login-dialog" id="login-dialog"> 
+        <div class="login-dialog-header">
+            <button class="closeBtn" id="closeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+            </button>
+            <h2 class="login-dialog-title">
+                LOGIN
+            </h2>
+        </div>
+        <div>
+            <form class="login-form" id="login-form">
+                <label for="login">
+                    Login:<br>
+                    <input type="text" id="login" placeholder="Type your username:">
+                    <hr>
+                </label>
+
+                <label for="password">
+                    Password:<br>
+                    <input type="password"  id="password" placeholder="Type your password:">
+                    <hr>
+                </label>
+
+                <button type="button" id="loginButton" class="login-button">Login</button>
+            </form>
+        </div>
+    </dialog>
+
+    <footer>
+        <div></div>
+        <div>
+            <p>IT Stock Dashboard v1.0 © 2026 TomTom Internship Project</p>
+        </div>
+        <div>
+            <button id="adminPanelBtn" class="adminPanelBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> <span id="adminPanelLabel">Admin</span></button>
+        </div>
+    </footer>
+</body>
+<script type="module" src="app.js"></script>
+</html>

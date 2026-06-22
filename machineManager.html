@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+   
+</head>
+<body>
+    <header>
+        <div>
+            <h1>IT Stock Dashboard</h1>
+        </div>
+        <div>
+            <ul class="nav-row">
+                <li class="nav-cell"><a href="index.html">HOME</a></li>
+                <li class="nav-cell"><a href="machineManager.html">ADD</a></li>
+                <li class="nav-cell"><a href="machineTable.html">TABLE</a></li>
+            </ul>
+        </div>
+        <div></div>
+    </header>
+
+    <main class="machine-form-container">
+        <h4>Add new machine</h4>
+        <form class="machine-form">
+            <label for="asset_tag">
+                Asset tag
+                <input type="text" name="asset-tag" id="asset-tag">
+            </label>
+
+            <label for="serial_number">
+                Serial number
+                <input type="text" name="serial-number" id="serial-number">
+            </label>
+
+            <label for="brand">
+                Brand
+                <select id="brand"></select>
+            </label>
+
+            <label for="model">
+                Model
+                <select id="model"></select>
+            </label>
+
+            <label for="type">
+                Type
+                <select id="type"></select>
+            </label>
+
+            <label for="form_factor">
+                Form factor
+                <select id="form-factor"></select>
+            </label>
+            
+            <label for="os">
+                Os
+                <select id="os"></select>            
+            </label>
+
+            <label for="cpu">
+                CPU
+                <select id="cpu"></select>
+            </label>
+
+            <label for="ram_gb">
+                Ram GB
+                <select id="ram"></select>
+            </label>
+
+            <label for="storage_gb">
+                Storage GB
+                <select id="storage"></select>
+            </label>
+
+            <label for="storage_type">
+                Storage type
+                <select id="storage-type"></select>
+            </label>
+
+            <label for="gpu">
+                GPU
+            <select id="gpu"></select>
+            </label>
+
+            <label for="screen">
+                Screen
+                <select id="screen"></select>
+            </label>
+
+            <label for="purchase_date">
+                Purchase date
+                <input type="date" name="purchase-date" id="purchase-date">
+            </label>
+            
+            <label for="warranty_expiry">
+                Warranty expiry
+                <input type="date" name="warranty-expiry" id="warranty-expiry">
+            </label>    
+
+            <label for="department">
+                Department
+                <select id="department"></select>
+            </label>
+
+            <label for="site">
+                Site
+                <select id="site"></select>
+            </label>
+
+            <label for="assigned_to">
+                Assigned to
+                <select name="assigned-to" id="assigned-to"></select>
+            </label>
+
+            <label for="new-assigned-to">
+                New employee
+                <input type="text" name="new-assigned-to" id="new-assigned-to" placeholder="Type new employee name">
+            </label>
+            
+            <label for="status">
+                Status
+                <select id="status"></select>
+            </label>
+
+            <label for="condition">Condition
+                <select id="condition"></select>
+            </label>
+            <div class="form-buttons">
+                <button type="submit" id="submit-btn">Add machine</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>IT Stock Dashboard v1.0 © 2026 TomTom Internship Project</p>
+    </footer>
+</body>
+<script type="module" src="./machineManager.js"></script>
+</html>
